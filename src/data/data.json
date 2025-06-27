@@ -67,36 +67,37 @@
     }
   ],
   "Services": [
-    {
-      "icon": "fa fa-wordpress",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-cart-arrow-down",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-cloud-download",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-language",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-plane",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    },
-    {
-      "icon": "fa fa-pie-chart",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-    }
+  
+  {
+    "icon": "fa fa-lock",
+    "name": "DMIT Test & Report",
+    "text": "We provide Dermatoglyphics-based analysis to help identify your child's unique strengths and learning style."
+  },
+  {
+    "icon": "fa fa-eye",
+    "name": "Midbrain Activation",
+    "text": "Boost focus, memory, and intuition through scientific and engaging midbrain activation techniques."
+  },
+  {
+    "icon": "fa fa-comments",
+    "name": "Parent Counseling",
+    "text": "We guide parents to better understand and support their child’s development through one-on-one expert sessions."
+  },
+  {
+    "icon": "fa fa-lightbulb-o",
+    "name": "Brain Development Activities",
+    "text": "Fun, creative exercises that improve observation, imagination, and problem-solving skills in children."
+  },
+  {
+    "icon": "fa fa-graduation-cap",
+    "name": "Career Guidance",
+    "text": "Based on DMIT reports, we help identify suitable future education and career paths for your child."
+  },
+  {
+    "icon": "fa fa-child",
+    "name": "Confidence Building",
+    "text": "We work on enhancing your child’s self-esteem and communication skills through playful learning."
+  }
   ],
   "Testimonials": [
     {
@@ -143,12 +144,13 @@
     }
   ],
   "Contact": {
-    "address": "4321 California St, San Francisco, CA 12345 ",
-    "phone": "+1 123 456 1234",
-    "email": "info@company.com",
+    "address": "0-703, Raksha Addela Mart Gaur City - 2, Grater Noida West GB Nagar, UP(India) ",
+    "phone": "+91 6397186498 | +91 9253562003",
+    "email": "info@upgradeyourchild.in",
     "facebook": "fb.com",
-    "twitter": "twitter.com",
-    "youtube": "youtube.com"
+    "instagram": "instagram.com",
+    "youtube": "https://www.youtube.com/@Deepakarya63",
+    "whatsapp": "https://wa.me/9253562003"
   },"Features": [
   {
     "icon": "fa fa-lightbulb-o",
