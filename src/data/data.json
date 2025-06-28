@@ -133,7 +133,7 @@
   ],
   "Team": [
     {
-      "img": "img/team/01.jpg",
+      "img": "img/team/01.png",
       "name": "Rishikesh Dharme",
       "job": "Co-Founder"
     },
@@ -144,14 +144,16 @@
     }
   ],
   "Contact": {
-    "address": "0-703, Raksha Addela Mart Gaur City - 2, Grater Noida West GB Nagar, UP(India) ",
+    "address": "0-703, Raksha Addela Mart Gaur City - 2, Grater Noida West GB Nagar, UP (India) 201318",
     "phone": "+91 6397186498 | +91 9253562003",
     "email": "info@upgradeyourchild.in",
-    "facebook": "fb.com",
-    "instagram": "instagram.com",
+    "facebook": "https://www.facebook.com/upgradeyourchild",
+    "instagram": "https://www.instagram.com/upgradeyourchild.in",
     "youtube": "https://www.youtube.com/@Deepakarya63",
-    "whatsapp": "https://wa.me/9253562003"
-  },"Features": [
+    "whatsapp": "https://wa.me/9253562003",
+    "linkedin": "https://www.linkedin.com/company/upgradeyourchild"
+  },
+  "Features": [
   {
     "icon": "fa fa-lightbulb-o",
     "title": "DMIT Analysis",
