@@ -158,11 +158,11 @@ export const Contact = (props) => {
       <div id="footer">
         <div className="container text-center">
           <p>
-            &copy; 2023 Issaaf Kattan React Land Page Template. Design by{" "}
-            <a href="http://www.templatewire.com" rel="nofollow">
-              TemplateWire
-            </a>
-          </p>
+            
+            &copy; {new Date().getFullYear()} Upgrade Your Child™. All rights reserved. <br />
+            Designed & Developed by <a href="https://your-portfolio-link.com" target="_blank">TechnoRishi</a>
+
+        </p>
         </div>
       </div>
     </div>
