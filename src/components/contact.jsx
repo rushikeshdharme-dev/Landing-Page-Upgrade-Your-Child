@@ -2,6 +2,7 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 import React from "react";
 
+
 const initialState = {
   name: "",
   email: "",
@@ -168,62 +169,98 @@ export const Contact = (props) => {
 
 
 
-{/* Interested In - Checkboxes */}
-<div className="form-group mt-3">
-  <label className="fw-bold d-block mb-2">Interested In:</label>
 
-  <div className="form-check">
-    <input
-      type="checkbox"
-      className="form-check-input"
-      name="interest"
-      value="DMIT Test"
-      id="dmit"
-    />
-    <label className="form-check-label" htmlFor="dmit">
-      DMIT Test
-    </label>
-  </div>
 
-  <div className="form-check">
-    <input
-      type="checkbox"
-      className="form-check-input"
-      name="interest"
-      value="Midbrain Activation"
-      id="midbrain"
-    />
-    <label className="form-check-label" htmlFor="midbrain">
-      Midbrain Activation
-    </label>
-  </div>
 
-  <div className="form-check">
-    <input
-      type="checkbox"
-      className="form-check-input"
-      name="interest"
-      value="Brain Engineering"
-      id="be"
-    />
-    <label className="form-check-label" htmlFor="be">
-      Brain Engineering
-    </label>
-  </div>
 
-  <div className="form-check">
-    <input
-      type="checkbox"
-      className="form-check-input"
-      name="interest"
-      value="Parent Counseling"
-      id="counseling"
-    />
-    <label className="form-check-label" htmlFor="counseling">
-      Parent Counseling
-    </label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className="form-group mt-4">
+<label className="interest-heading">Interested In:</label>
+
+
+<div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+    {[
+      { id: "dmit", label: "DMIT Test" },
+      { id: "midbrain", label: "Midbrain Activation" },
+      { id: "be", label: "Brain Engineering" },
+      { id: "pc", label: "Parent Counseling" }
+    ].map((item) => (
+      <div className="checkbox-wrapper-37" key={item.id}>
+        <input type="checkbox" id={item.id} name="interest" value={item.label} />
+        <label htmlFor={item.id} className="terms-label">
+          <svg
+            className="checkbox-svg"
+            viewBox="0 0 200 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <mask id={`path-${item.id}`} fill="white">
+              <rect width="200" height="200" />
+            </mask>
+            <rect
+              width="200"
+              height="200"
+              className="checkbox-box"
+              strokeWidth="40"
+              mask={`url(#path-${item.id})`}
+            />
+            <path
+              className="checkbox-tick"
+              d="M52 111.018L76.9867 136L149 64"
+              strokeWidth="15"
+            />
+          </svg>
+          <span className="label-text">{item.label}</span>
+        </label>
+      </div>
+    ))}
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
