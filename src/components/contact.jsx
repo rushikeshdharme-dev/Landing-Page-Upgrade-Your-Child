@@ -3,6 +3,30 @@ import emailjs from "emailjs-com";
 import React from "react";
 
 
+//to connect sheet with form
+const handleFormSubmit = (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+
+  fetch(
+    "https://script.google.com/macros/s/AKfycbwhBhwtz08b5XDCxiDi8WeS_txOry3fxDHCoqHppWPPIcuxU8UoRT9W2KTfcia86K0A/exec",
+    {
+      method: "POST",
+      body: data,
+    }
+  )
+    .then(() => {
+      window.location.href = "https://upgradeyourchild.in/thank-you";
+    })
+    .catch((err) => {
+      console.error("Error!", err.message);
+      alert("There was an error submitting the form.");
+    });
+};
+
+
+
 const initialState = {
   name: "",
   email: "",
@@ -49,59 +73,24 @@ export const Contact = (props) => {
                   get back to you as soon as possible.
                 </p>
               </div>
-              {/* <form name="sentMessage" validate onSubmit={handleSubmit}>
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="form-control"
-                        placeholder="Name"
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="form-control"
-                        placeholder="Email"
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
-                  </div>
-                </div>
-                <div className="form-group">
-                  <textarea
-                    name="message"
-                    id="message"
-                    className="form-control"
-                    rows="4"
-                    placeholder="Message"
-                    required
-                    onChange={handleChange}
-                  ></textarea>
-                  <p className="help-block text-danger"></p>
-                </div>
-                <div id="success"></div>
-                <button type="submit" className="btn btn-custom btn-lg">
-                  Send Message
-                </button>
-              </form> */}
+              
 
-              <form
-  action="https://formsubmit.io/send/info@upgradeyourchild.in"
-  method="POST"
->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <form onSubmit={handleFormSubmit}>
+
   <div className="row">
     {/* Name */}
     <div className="col-md-6">
@@ -156,132 +145,56 @@ export const Contact = (props) => {
     </div>
   </div>
 
-  {/* Interested In - Checkboxes
-  <div className="form-group">
-    <label><input type="checkbox" name="interest" value="DMIT Test" /> DMIT Test</label><br />
-    <label><input type="checkbox" name="interest" value="Midbrain Activation" /> Midbrain Activation</label><br />
-    <label><input type="checkbox" name="interest" value="Brain Engineering" /> Brain Engineering</label><br />
-    <label><input type="checkbox" name="interest" value="Parent Counseling" /> Parent Counseling</label>
-  </div> */}
+  {/* Interested In */}
+  <div className="form-group mt-4">
+    <label className="interest-heading">Interested In:</label>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div className="form-group mt-4">
-<label className="interest-heading">Interested In:</label>
-
-
-<div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-    {[
-      { id: "dmit", label: "DMIT Test" },
-      { id: "midbrain", label: "Midbrain Activation" },
-      { id: "be", label: "Brain Engineering" },
-      { id: "pc", label: "Parent Counseling" }
-    ].map((item) => (
-      <div className="checkbox-wrapper-37" key={item.id}>
-        <input type="checkbox" id={item.id} name="interest" value={item.label} />
-        <label htmlFor={item.id} className="terms-label">
-          <svg
-            className="checkbox-svg"
-            viewBox="0 0 200 200"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <mask id={`path-${item.id}`} fill="white">
-              <rect width="200" height="200" />
-            </mask>
-            <rect
-              width="200"
-              height="200"
-              className="checkbox-box"
-              strokeWidth="40"
-              mask={`url(#path-${item.id})`}
-            />
-            <path
-              className="checkbox-tick"
-              d="M52 111.018L76.9867 136L149 64"
-              strokeWidth="15"
-            />
-          </svg>
-          <span className="label-text">{item.label}</span>
-        </label>
-      </div>
-    ))}
+    <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+      {[
+        { id: "dmit", label: "DMIT Test" },
+        { id: "midbrain", label: "Midbrain Activation" },
+        { id: "be", label: "Brain Engineering" },
+        { id: "pc", label: "Parent Counseling" }
+      ].map((item) => (
+        <div className="checkbox-wrapper-37" key={item.id}>
+          <input
+            type="checkbox"
+            id={item.id}
+            name="interest[]" // ✅ Important: use array syntax
+            value={item.label}
+          />
+          <label htmlFor={item.id} className="terms-label">
+            <svg
+              className="checkbox-svg"
+              viewBox="0 0 200 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <mask id={`path-${item.id}`} fill="white">
+                <rect width="200" height="200" />
+              </mask>
+              <rect
+                width="200"
+                height="200"
+                className="checkbox-box"
+                strokeWidth="40"
+                mask={`url(#path-${item.id})`}
+              />
+              <path
+                className="checkbox-tick"
+                d="M52 111.018L76.9867 136L149 64"
+                strokeWidth="15"
+              />
+            </svg>
+            <span className="label-text">{item.label}</span>
+          </label>
+        </div>
+      ))}
+    </div>
   </div>
-</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  {/* Optional Message */}
-  <div className="form-group">
+  {/* Optional Query Box */}
+  <div className="form-group mt-3">
     <textarea
       name="message"
       className="form-control"
@@ -293,7 +206,7 @@ export const Contact = (props) => {
   {/* Optional Redirect After Submit */}
   <input
     type="hidden"
-    name="_redirect"
+    name="redirect"
     value="https://upgradeyourchild.in/thank-you"
   />
 
@@ -301,6 +214,24 @@ export const Contact = (props) => {
     Send Message
   </button>
 </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             </div>
           </div>
