@@ -1,7 +1,16 @@
 import React from "react";
 
 export const Navigation = () => {
-  const handleNavItemClick = () => {
+  const handleNavItemClick = (e, targetId) => {
+    e.preventDefault();
+
+    // Smooth scroll to section
+    const element = document.querySelector(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    // Auto-close in mobile view
     const collapseEl = document.getElementById("bs-example-navbar-collapse-1");
     if (collapseEl && collapseEl.classList.contains("in")) {
       collapseEl.classList.remove("in");
@@ -34,41 +43,13 @@ export const Navigation = () => {
 
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">
-            <li>
-              <a href="#features" className="page-scroll" onClick={handleNavItemClick}>
-                Features
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="page-scroll" onClick={handleNavItemClick}>
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#services" className="page-scroll" onClick={handleNavItemClick}>
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#portfolio" className="page-scroll" onClick={handleNavItemClick}>
-                Gallery
-              </a>
-            </li>
-            <li>
-              <a href="#testimonials" className="page-scroll" onClick={handleNavItemClick}>
-                Testimonials
-              </a>
-            </li>
-            <li>
-              <a href="#team" className="page-scroll" onClick={handleNavItemClick}>
-                Team
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="page-scroll" onClick={handleNavItemClick}>
-                Contact
-              </a>
-            </li>
+            <li><a href="#features" onClick={(e) => handleNavItemClick(e, "#features")}>Features</a></li>
+            <li><a href="#about" onClick={(e) => handleNavItemClick(e, "#about")}>About</a></li>
+            <li><a href="#services" onClick={(e) => handleNavItemClick(e, "#services")}>Services</a></li>
+            <li><a href="#portfolio" onClick={(e) => handleNavItemClick(e, "#portfolio")}>Gallery</a></li>
+            <li><a href="#testimonials" onClick={(e) => handleNavItemClick(e, "#testimonials")}>Testimonials</a></li>
+            <li><a href="#team" onClick={(e) => handleNavItemClick(e, "#team")}>Team</a></li>
+            <li><a href="#contact" onClick={(e) => handleNavItemClick(e, "#contact")}>Contact</a></li>
           </ul>
         </div>
       </div>
