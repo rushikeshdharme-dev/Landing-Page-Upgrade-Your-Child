@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+//demo
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 // Landing Page Components
 import { Navigation } from "./components/navigation";
 import { Header } from "./components/header";
@@ -41,6 +47,7 @@ const Home = () => {
       <Testimonials data={landingPageData.Testimonials} />
       <Team data={landingPageData.Team} />
       <Contact data={landingPageData.Contact} />
+            <ToastContainer position="top-center" autoClose={3000} />
     </>
   );
 };

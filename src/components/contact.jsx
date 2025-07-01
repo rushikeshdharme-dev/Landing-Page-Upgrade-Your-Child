@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // ✅ Router hook
+import { toast } from 'react-toastify';
+
+
 
 const initialState = {
   name: "",
@@ -9,6 +12,7 @@ const initialState = {
 
 export const Contact = (props) => {
   const [{ name, email, message }, setState] = useState(initialState);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate(); // ✅ for redirection
 
   const handleChange = (e) => {
@@ -20,6 +24,13 @@ export const Contact = (props) => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+
+    
+  if (isSubmitting) return; // prevent duplicate clicks
+
+  setIsSubmitting(true); // ✅ start loading
+
+    
     const form = e.target;
     const data = new FormData(form);
 
@@ -32,15 +43,26 @@ export const Contact = (props) => {
       }
     )
       .then(() => {
-        alert("Form submitted successfully!");
+          toast.success("🎉 Form submitted successfully!");
+        // alert("Form submitted successfully!");
         form.reset(); // optional
-        navigate("/thank-you"); // ✅ local redirect
+        clearState();
+        // navigate("/thank-you"); // ✅ local redirect
+        
+  // 👇 Delay navigation slightly so toast is visible
+  setTimeout(() => {
+    navigate("/thank-you");
+  }, 4000);
       })
       .catch((err) => {
         console.error("Error!", err.message);
-        alert("There was an error submitting the form.");
-      });
-
+        // alert("There was an error submitting the form.");
+        
+     toast.error("❌ Submission failed. Please try again.");
+      })
+         .finally(() => {
+      setIsSubmitting(false); // ✅ end loading
+    });
   };
 
   return (
@@ -169,9 +191,14 @@ export const Contact = (props) => {
                   value="https://upgradeyourchild.in/thank-you"
                 />
 
-                <button type="submit" className="btn btn-custom btn-lg">
-                  Send Message
-                </button>
+              <button
+  type="submit"
+  className="btn btn-custom btn-lg"
+  disabled={isSubmitting}
+>
+  {isSubmitting ? "Sending..." : "Send Message"}
+</button>
+
               </form>
             </div>
           </div>
