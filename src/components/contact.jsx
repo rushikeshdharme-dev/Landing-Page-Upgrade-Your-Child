@@ -25,12 +25,12 @@ export const Contact = (props) => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    
-  if (isSubmitting) return; // prevent duplicate clicks
 
-  setIsSubmitting(true); // ✅ start loading
+    if (isSubmitting) return; // prevent duplicate clicks
 
-    
+    setIsSubmitting(true); // ✅ start loading
+
+
     const form = e.target;
     const data = new FormData(form);
 
@@ -43,26 +43,26 @@ export const Contact = (props) => {
       }
     )
       .then(() => {
-          toast.success("🎉 Form submitted successfully!");
+        toast.success("🎉 Form submitted successfully!");
         // alert("Form submitted successfully!");
         form.reset(); // optional
         clearState();
         // navigate("/thank-you"); // ✅ local redirect
-        
-  // 👇 Delay navigation slightly so toast is visible
-  setTimeout(() => {
-    navigate("/thank-you");
-  }, 4000);
+
+        // 👇 Delay navigation slightly so toast is visible
+        setTimeout(() => {
+          navigate("/thank-you");
+        }, 4000);
       })
       .catch((err) => {
         console.error("Error!", err.message);
         // alert("There was an error submitting the form.");
-        
-     toast.error("❌ Submission failed. Please try again.");
+
+        toast.error("❌ Submission failed. Please try again.");
       })
-         .finally(() => {
-      setIsSubmitting(false); // ✅ end loading
-    });
+      .finally(() => {
+        setIsSubmitting(false); // ✅ end loading
+      });
   };
 
   return (
@@ -191,13 +191,13 @@ export const Contact = (props) => {
                   value="https://upgradeyourchild.in/thank-you"
                 />
 
-              <button
-  type="submit"
-  className="btn btn-custom btn-lg"
-  disabled={isSubmitting}
->
-  {isSubmitting ? "Sending..." : "Send Message"}
-</button>
+                <button
+                  type="submit"
+                  className="btn btn-custom btn-lg"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </button>
 
               </form>
             </div>
@@ -268,17 +268,17 @@ export const Contact = (props) => {
           </div>
         </div>
 
-       
+
       </div>
-       {/* Footer */}
-        <div id="footer">
-          <div className="container text-center">
-            <p>
-              &copy; {new Date().getFullYear()} Upgrade Your Child™. All rights reserved. <br />
-              Designed & Developed by <a href="https://your-portfolio-link.com" target="_blank">TechnoRishi</a>
-            </p>
-          </div>
+      {/* Footer */}
+      <div id="footer">
+        <div className="container text-center">
+          <p>
+            &copy; {new Date().getFullYear()} Upgrade Your Child™. All rights reserved. <br />
+            Designed & Developed by <a href="https://your-portfolio-link.com" target="_blank">TechnoRishi</a>
+          </p>
         </div>
+      </div>
     </div>
   );
 };
