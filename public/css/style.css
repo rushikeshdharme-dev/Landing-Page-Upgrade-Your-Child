@@ -215,6 +215,31 @@ a:focus,
   background-size: cover;
   -o-background-size: cover;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 767px) {
   .intro {
     background: url(../img/intro-bg-mob.png) center top no-repeat;

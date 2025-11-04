@@ -99,44 +99,55 @@
     "text": "We work on enhancing your child’s self-esteem and communication skills through playful learning."
   }
   ],
-  "Testimonials": [
-    {
-      "img": "img/testimonials/01.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/02.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
-    },
-    {
-      "img": "img/testimonials/03.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/04.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
-    },
-    {
-      "img": "img/testimonials/05.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
-    },
-    {
-      "img": "img/testimonials/06.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
-    }
-  ],
+
+
+
+"Testimonials": [
+  {
+    "img": "img/testimonials/01.jpg",
+    "text": "\"Upgrade Your Child™ helped my son discover his true potential through DMIT. The insights were clear, and we saw improvement in focus and learning habits within weeks.\"",
+    "name": "Rahul Mehta"
+  },
+  {
+    "img": "img/testimonials/02.jpg",
+    "text": "\"The sessions were very informative and practical. I appreciate how the team guided us step by step to understand our child’s strengths and weaknesses scientifically.\"",
+    "name": "Amit Sharma"
+  },
+  {
+    "img": "img/testimonials/03.jpg",
+    "text": "\"As a parent, I was amazed by the accuracy of the DMIT report. It gave me clarity about my child’s learning style and helped us choose better career options early on.\"",
+    "name": "Rakesh Verma"
+  },
+  {
+    "img": "img/testimonials/04.jpg",
+    "text": "\"Upgrade Your Child™ made a real difference in my daughter’s confidence. The brain development activities were fun and impactful. Highly recommend their programs!\"",
+    "name": "Neha Patel"
+  },
+  {
+    "img": "img/testimonials/06.jpg",
+    "text": "\"Their counseling sessions were very supportive and personalized. I loved how they connected with children and parents both with care and professionalism.\"",
+    "name": "Anjali Nair"
+  },
+  {
+    "img": "img/testimonials/05.jpg",
+    "text": "\"The Upgrade Your Child™ team is dedicated and passionate. Their scientific approach to child development really helps families make informed decisions for the future.\"",
+    "name": "Suresh Kumar"
+  }
+]
+,
+
+
+
+
+
+
+
+
+
+
+  
   "Team": [
-    {
-      "img": "img/team/01.PNG",
-      "name": "Rishikesh Dharme",
-      "job": "Co-Founder"
-    },
+   
     {
       "img": "img/team/02.jpg",
       "name": "Deepak Arya",
